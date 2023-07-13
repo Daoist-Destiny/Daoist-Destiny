@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cen3ipxfdu8vr"]
+
+[ext_resource type="Script" path="res://Label.gd" id="2_xdt6e"]
+
+[sub_resource type="GDScript" id="GDScript_853xc"]
+script/source = "extends Node2D
+
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+ 
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_853xc")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1918.0
+offset_bottom = 1083.0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_xdt6e")
