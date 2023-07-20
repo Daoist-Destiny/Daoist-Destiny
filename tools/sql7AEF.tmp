@@ -1,0 +1,36 @@
+extends Node
+var sqllite = preload("res://addons/godot-sqlite/godot-sqlite.gd")# 导入和引用
+
+var db
+var dbPath := "res://data/dao.db"
+
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+func append_rec(db_path:String,table_name:String,rec:Dictionary):
+	var db = SQLite.new() # 创建实际的数据库对象db
+	db.path = db_path      # 指定数据库文件
+	# 实际操作
+	db.open_db()
+	var success = db.insert_row(table_name,rec)
+	if success:
+		print("数据插入成功")
+	db.close_db()
+func load_table_recs(dbPath:String,sqlString:String) -> Array:
+	var results = []
+	var db = SQLite.new() # 创建实际的数据库对象db
+	db.path = dbPath      # 指定数据库文件
+	# 实际操作
+	db.open_db()
+	db.query(sqlString)
+	results = db.query_result
+	db.close_db()
+	return results
+	

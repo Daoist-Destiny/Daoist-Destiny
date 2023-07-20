@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgn32iu5rfkep"]
+
+[ext_resource type="Script" path="res://scripts/startLabel2.gd" id="1_0xkuv"]
+[ext_resource type="Script" path="res://scripts/start.gd" id="1_sdv12"]
+[ext_resource type="Script" path="res://scripts/startRichLabel1.gd" id="2_ut4qu"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_sdv12")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -1.0
+offset_top = 648.0
+offset_right = 1366.0
+offset_bottom = 770.0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_0xkuv")
+
+[node name="startRichLabel1" type="RichTextLabel" parent="."]
+offset_right = 1369.0
+offset_bottom = 618.0
+script = ExtResource("2_ut4qu")
