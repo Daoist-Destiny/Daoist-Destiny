@@ -18,6 +18,6 @@ git clone https://gitee.com/daoist-destiny/Daoist-Destiny.git
 打开后点击右上角运行或使用快捷键F5运行项目。
 
 版本说明：
-* 当前版本： (version-0.0.1)[docs/version-0.0.1.md]
+* 当前版本： [version-0.0.1](docs/version-0.0.1.md)
 * 历史版本：
     * 暂无
